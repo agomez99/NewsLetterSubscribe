@@ -14,53 +14,91 @@
 
   </head>
   <body>
+    <script>
+      function subscribe() {
+  var email = document.getElementById('email').value;
+  
+  // Perform validation on the email address
+  if (!validateEmail(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+  
+  // Perform further processing (e.g., sending data to the server)
+  // ...
+  
+  // Display a success message
+  document.getElementById('success-message').style.display = 'block';
+  document.getElementById('content').style.display = 'none';
+
+       // Clear the success message and reload the page after 3 seconds (3000 milliseconds)
+      // setTimeout(function() {
+       // document.getElementById('success-message').style.display = 'none';
+        //location.reload();
+     // }, 3000);
+    
+  // Clear the input field
+  document.getElementById('email').value = '';
+}
+function clearMessage(){
+  document.getElementById('email').value = '';
+  document.getElementById('success-message').style.display = 'none';
+  document.getElementById('content').style.display = 'flex';
+
+}
+
+function validateEmail(email) {
+  // Use a regular expression pattern to validate the email address
+  var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return pattern.test(email);
+}
+      </script>
 
     <main>
 
       <div class="container ">
-        <div class="card">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="update-div">
-            <h1>Stay updated!</h1>
-            <p>Join 60,000+ product managers receiving monthly updates on:</p>
-             <ul> 
-            <img src="/assets/images/icon-list.svg" /><li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-           <li> And much more!</li>
-            <input class="input"></imput>
-            <button class="sub-button">Subscribe to monthly newsletter</button>
-
-
-            </div>
+        <div class="content-card">
+          <div class="row" id="content">
+               <div class="col-md-6">
+                  <div class="update-div">
+                    <h1>Stay updated!</h1>
+                    <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                    <div class="list">
+                      <div class="list-div"> 
+                    <img src="/assets/images/icon-list.svg" />Product discovery and building what matters
+                      </div>
+                      <div class="list-div"> 
+                    <img src="/assets/images/icon-list.svg" />Measuring to ensure updates are a success
+                      </div>
+                    <div class="list-div"> 
+                    <img src="/assets/images/icon-list.svg" /> And much more!
+                    </div>   
+                  </div>
+                    <label>Enter Address</label>
+                    <input class="input" placeholder="email@company.com" type="email" id="email" ></imput>
+                    <button class="sub-button"  onclick="subscribe()">Subscribe to monthly newsletter</button>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                  <div class="image-div">
+                    <img src="./assets/images/illustration-sign-up-desktop.svg"  alt='illustration' class="desktop-img"/>
+                    <div class="image-div">
+                      <img src="./assets/images/illustration-sign-up-mobile.svg"  alt='illustration'  class="mobile-img"/>
+                  </div>
+                </div>
+                  </div>
           </div>
-          <div class="col-md-6">
-           <div class="image-div">
-             <img src="./assets/images/illustration-sign-up-desktop.svg"  alt='illustration' class="illustration" />
-          </div>
-        </div>
-        </div>
-      </div>
+              <div id="success-message" class="success-message">
+                    <div>
+                      <img src="./assets/images/icon-success.svg" alt="success" />
+                    <h2>Thanks for subscribing!</h2>
+
+                    <p>A confirmation email has been sent to ash@loremcompany.com. 
+                    Please open it and click the button inside to confirm your subscription.</p>
+                    <button class="success-btn" onclick="clearMessage()">Dissmiss Message</button>
+                    </div>
+               </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
   </body>
 </html>
-
-
-
-Email address
-email@company.com
-
-<!-- Sign-up form end -->
-
-<!-- Success message start -->
-
-Thanks for subscribing!
-
-A confirmation email has been sent to ash@loremcompany.com. 
-Please open it and click the button inside to confirm your subscription.
-
-Dismiss message
-
-<!-- Success message end -->
