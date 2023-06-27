@@ -6,15 +6,16 @@ function subscribe() {
     alert('Please enter a valid email address.');
     return;
   }
-  
-  // Perform further processing (e.g., sending data to the server)
-  // ...
-  
-  // Display a success message
-  alert('Thank you for subscribing to our newsletter!');
-  
-  // Clear the input field
+
+  document.getElementById('success-message').style.display = 'block';
+  document.getElementById('content').style.display = 'none';
   document.getElementById('email').value = '';
+}
+function clearMessage(){
+  document.getElementById('email').value = '';
+  document.getElementById('success-message').style.display = 'none';
+  document.getElementById('content').style.display = 'flex';
+
 }
 
 function validateEmail(email) {
@@ -22,3 +23,4 @@ function validateEmail(email) {
   var pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return pattern.test(email);
 }
+     

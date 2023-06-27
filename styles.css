@@ -68,12 +68,13 @@ li {
 .success-message {
   display: none;
   background-color: white;
-  width: 20rem;
-  height: 18rem;
+  width: 25rem;
+  height: 25rem;
   color: hsl(234, 29%, 20%);
   font-weight: bold;
+  padding:5%;
 }
-.success-btn {
+.success-button {
   width: 100%;
   height: 50px;
   border-radius: 5px;
@@ -82,4 +83,8 @@ li {
 }
 .success-button:hover {
   background-color: hsl(4, 100%, 67%);
+}
+.thanks-header{
+  font-size: 2.5rem;
+  font-weight: 900;
 }
