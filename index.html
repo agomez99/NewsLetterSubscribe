@@ -1,66 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 
-  </head>
+<head>
+  <title>Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
 
-
-    <main>
-
-      <div class="container ">
-        <div class="content-card">
-          <div class="row" id="content">
-               <div class="col-md-6">
-                  <div class="update-div">
-                    <h1>Stay updated!</h1>
-                    <p>Join 60,000+ product managers receiving monthly updates on:</p>
-                    <div class="list">
-                      <div class="list-div"> 
-                    <img src="/assets/images/icon-list.svg" />Product discovery and building what matters
-                      </div>
-                      <div class="list-div"> 
-                    <img src="/assets/images/icon-list.svg" />Measuring to ensure updates are a success
-                      </div>
-                    <div class="list-div"> 
-                    <img src="/assets/images/icon-list.svg" /> And much more!
-                    </div>   
+<body>
+  <main>
+    <div class="container">
+      <div class="content-card">
+        <div class="row" id="content">
+          <div class="col-md-6 col-sm-12">
+            <div class="update-div">
+              <h1 class="header">Stay updated!</h1>
+              <p>Join 60,000+ product managers receiving monthly updates on:</p>
+              <div class="list">
+                <div class="list-div">
+                  <div class="list-image">
+                    <img src="/assets/images/icon-list.svg" alt="List Icon">
                   </div>
-                    <label>Enter Address</label>
-                    <input class="input" placeholder="email@company.com" type="email" id="email" ></imput>
-                    <button class="sub-button"  onclick="subscribe()">Subscribe to monthly newsletter</button>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                  <div class="image-div">
-                    <img src="./assets/images/illustration-sign-up-desktop.svg"  alt='illustration' class="desktop-img"/>
-                    <div class="image-div">
-                      <img src="./assets/images/illustration-sign-up-mobile.svg"  alt='illustration'  class="mobile-img"/>
+                  <div>
+                    <p class="list-p">Product discovery and building what matters</p>
                   </div>
                 </div>
+                <div class="list-div">
+                  <div class="list-image">
+                    <img src="/assets/images/icon-list.svg" alt="List Icon">
                   </div>
+                  <div>
+                    <p class="list-p">Measuring to ensure updates are a success</p>
+                  </div>
+                </div>
+                <div class="list-div">
+                  <div class="list-image">
+                    <img src="/assets/images/icon-list.svg" alt="List Icon">
+                  </div>
+                  <div>
+                    <p class="list-p"> And much more!</p>
+                  </div>
+                </div>
+              </div>
+              <label for="email" class="label">Enter address</label>
+              <input class="input" placeholder="email@company.com" type="email" id="email">
+              <button class="sub-button" onclick="subscribe()">Subscribe to monthly newsletter</button>
+            </div>
           </div>
-              <div id="success-message" class="success-message">
-                    <div>
-                      <img src="./assets/images/icon-success.svg" alt="success" />
-                    <h2 class="thanks-header">Thanks for subscribing!</h2>
+          <div class="col-md-6 col-sm-12">
+            <div class="image-div">
+              <img src="./assets/images/illustration-sign-up-desktop.svg" alt="Illustration" class="desktop-img">
+              <img src="./assets/images/illustration-sign-up-mobile.svg" alt="Illustration" class="mobile-img">
+            </div>
+          </div>
+        </div>
+        <div id="success-message" class="success-message">
+          <div>
+            <img src="./assets/images/icon-success.svg" alt="Success Icon">
+            <h2 class="thanks-header">Thanks for subscribing!</h2>
+            <p>A confirmation email has been sent to ash@loremcompany.com.
+              Please open it and click the button inside to confirm your subscription.</p>
+            <button class="success-button" onclick="clearMessage()">Dismiss Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
 
-                    <p>A confirmation email has been sent to ash@loremcompany.com. 
-                    Please open it and click the button inside to confirm your subscription.</p>
-                    <button class="success-button" onclick="clearMessage()">Dismiss Message</button>
-                    </div>
-               </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-
-  </body>
 </html>

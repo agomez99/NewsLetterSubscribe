@@ -3,6 +3,9 @@
   box-sizing: border-box;
 }
 
+.row{
+  padding:0px;
+}
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -10,18 +13,19 @@ body {
 }
 
 main {
-  padding: 1rem;
   background-color: hsl(235, 18%, 26%);
   font-family: 'Roboto', sans-serif;
 }
 .content-card {
   border-radius: 25px;
   background-color: white;
-  padding: 2%;
+  padding: 2% 1%;
+  height:35rem;
+  width:48rem;
 }
-h1 {
-  font-weight: 700;
-  font-size: 1.5rem;
+.header {
+  font-weight:bold;
+  font-size: 3rem;
 }
 .container {
   min-height: 100vh;
@@ -30,20 +34,28 @@ h1 {
   align-items: center;
 }
 .update-div {
-  padding: 10%;
+  padding: 10% 5%;
 }
 .list {
   margin-bottom: 5%;
 }
 .list-div {
-  display: flex;
+  display:flex;
+}
+.list-p{
+  font-size: 0.9rem;
+}
+.list-image{
+  flex-basis:5%;
+  margin-right: 5%;
 }
 li {
   list-style: none;
 }
 .desktop-img {
   display: block;
-  width: 100%;
+  width: auto;
+  height:32rem;
 }
 .mobile-img {
   display: none;
@@ -53,7 +65,13 @@ li {
   width: 100%;
   height: 50px;
   border-radius: 5px;
+  border-color: rgb(206, 202, 202);
   margin-bottom: 5%;
+  border-width: 1p;
+}
+.label{
+  font-size:.9rem;
+  font-weight: 900;
 }
 .sub-button {
   height: 50px;
@@ -87,4 +105,27 @@ li {
 .thanks-header{
   font-size: 2.5rem;
   font-weight: 900;
+}
+
+@media (max-width: 600px) {
+
+  .row{
+    flex-direction: column-reverse;
+  }
+  .desktop-img {
+    display: none;
+  }
+  .mobile-img {
+    display:flex;
+    width: auto;
+  }
+  .content-card {
+    border-radius: 25px;
+    background-color: white;
+    height:52rem;
+    width:auto;
+    top: -30px;
+    position: relative;
+  }
+  
 }
