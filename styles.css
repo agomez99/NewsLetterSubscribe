@@ -53,9 +53,8 @@ li {
   list-style: none;
 }
 .desktop-img {
-  display: block;
-  width: auto;
-  height:32rem;
+  width: 100%;
+  height: auto;
 }
 .mobile-img {
   display: none;
@@ -123,8 +122,8 @@ li {
     display: none;
   }
   .mobile-img {
-    display:flex;
-    width: auto;
+  width: 100%;
+  height: auto;
   }
   .content-card {
     border-radius: 25px;
