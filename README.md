@@ -7,7 +7,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 ### Links
 
 - Solution URL: [https://github.com/agomez99/NewsLetterSubscribe](https://github.com/agomez99/NewsLetterSubscribe)
-- Live Site URL: [https://agomez99.github.io/NewsLetterSubscribe/](https://agomez99.github.io/NewsLetterSubscribe/)
+- Live Site URL: [https://verdant-buttercream-92a709.netlify.app/](https://verdant-buttercream-92a709.netlify.app/)
 
 
 ### Built with
