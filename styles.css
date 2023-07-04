@@ -19,9 +19,9 @@ main {
 .content-card {
   border-radius: 25px;
   background-color: white;
-  padding: 2% 1%;
-  height:35rem;
-  width:48rem;
+  padding: 2% 2%;
+  height:37rem;
+  width:50rem;
 }
 .header {
   font-weight:bold;
@@ -75,14 +75,18 @@ li {
 .sub-button {
   height: 50px;
   width: 100%;
+  border:none;
   border-radius: 5px;
   background-color: hsl(234, 29%, 20%);
   color: white;
 }
 .sub-button:hover {
-  background-color: hsl(4, 100%, 67%);
+  background: linear-gradient(90deg, #ff5478, #ff5572, #ff576c, #ff5867, #ff5a61, #ff5d5b, #ff5f55, #ff624f);
+  filter: drop-shadow(-3px 10px 10px #b1aeae);
+
 }
-.success-message {
+
+  .success-message {
   display: none;
   background-color: white;
   width: 27rem;
@@ -100,12 +104,15 @@ li {
   height: 50px;
   border-radius: 5px;
   color: white;
+  border:none;
   background-color: hsl(234, 29%, 20%);
 }
 .success-button:hover {
-  background-color: hsl(4, 100%, 67%);
+  background: linear-gradient(90deg, #ff5478, #ff5572, #ff576c, #ff5867, #ff5a61, #ff5d5b, #ff5f55, #ff624f);
+  filter: drop-shadow(-3px 10px 10px #b1aeae);
 }
-.success-email{
+
+  .success-email{
   font-weight: bold;
 }
 .thanks-header{
@@ -114,21 +121,27 @@ li {
 }
 
 @media (max-width: 600px) {
-
+  .image-div{
+    display: block;
+  }
   .row{
     flex-direction: column-reverse;
   }
+
   .desktop-img {
     display: none;
   }
-  .mobile-img {
-  width: 100%;
-  height: auto;
+  .mobile-img{
+    display: block;
+
+  }
+  .container{
+    height:900px;
   }
   .content-card {
     border-radius: 25px;
     background-color: white;
-    height:52rem;
+    height:100%;
     width:auto;
     top: -30px;
     position: relative;
