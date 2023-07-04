@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const email = localStorage.getItem('email') || '';
   emailInput.value = email;
 
+
+
   form.addEventListener('submit', subscribe);
   form.addEventListener('reset', clearMessage);
   emailInput.addEventListener('input', handleInput);
@@ -32,6 +34,13 @@ function handleInput() {
   const emailInput = document.getElementById('email');
   const validEmail = document.getElementById('valid-email');
 
+  if(emailInput.value === '') {
+    validEmail.style.display = 'none';
+    emailInput.style.backgroundColor = 'white';
+    return;
+  }
+
+
   if (validateEmail(emailInput.value)) {
     emailInput.classList.remove('error');
     validEmail.classList.remove('error');
@@ -40,6 +49,7 @@ function handleInput() {
     emailInput.style.display = 'block';
     emailInput.style.borderColor = 'black';
     emailInput.style.color = 'black';
+    emailInput.style.backgroundColor = 'white';
 
   } else {
     showError(emailInput);
@@ -50,6 +60,7 @@ function handleInput() {
 function showError(emailInput) {
   const validEmail = document.getElementById('valid-email');
   emailInput.style.border = '1px solid hsl(354, 100%, 66%)';
+  emailInput.style.backgroundColor = '#ffc4bd';
   emailInput.style.color = 'hsl(354, 100%, 66%)';
   validEmail.textContent = 'Please enter a valid email address.';
   validEmail.style.display = 'block';
@@ -102,4 +113,5 @@ function clearMessage() {
   emailInput.style.borderColor = '';
   emailInput.style.borderWidth = '';
   emailInput.style.color = '';
+  emailInput.style.backgroundColor = '';
 }
