@@ -15,8 +15,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@agomez99](https://www.frontendmentor.io/profile/agomez99)
